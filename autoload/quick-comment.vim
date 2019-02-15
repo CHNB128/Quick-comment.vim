@@ -25,7 +25,7 @@ let s:comment_map = {
     \   "tex": '%',
     \ }
 
-function! ToggleComment()
+function! toggle_comment#excute()
     if has_key(s:comment_map, &filetype)
         let comment_leader = s:comment_map[&filetype]
         if getline('.') =~ "^\\s*" . comment_leader . " "
